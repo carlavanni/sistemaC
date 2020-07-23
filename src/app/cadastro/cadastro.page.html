@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "medium">
+    <ion-avatar slot="start">
+      <img src="https://www.jahviu.com.br/wp-content/uploads/2018/02/icon-cadastro.png">
+    </ion-avatar>
+    
+    <ion-title>
+     Cadastro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-item>
+     
+      <ion-label position="floating"><b>Nome completo:</b></ion-label>
+      <ion-input clearInput [(ngModel)]="nome"></ion-input>
+    
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"><b>CPF:</b></ion-label>
+      <ion-input clearInput [(ngModel)]="cpf"></ion-input>
+    </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"><b>Celular:</b></ion-label>
+        <ion-input clearInput [(ngModel)]="celular"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"><b>Data de nascimento:</b></ion-label>
+        <ion-input clearInput [(ngModel)]="datan"></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <ion-radio-group value="biff">
+          <ion-list-header>
+            <h6><b>
+            Gênero
+              </b>
+            </h6>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Feminino</ion-label>
+            <ion-radio slot="start" value="Feminino"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Masculino</ion-label>
+            <ion-radio slot="start" value="Masculino"></ion-radio>
+          </ion-item>
+      
+        </ion-radio-group>
+      </ion-list>
+      
+   
+   
+      <ion-item>
+        <ion-label position="floating"><b>Email:</b></ion-label>
+        <ion-input clearInput [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"><b>Senha:</b></ion-label>
+        <ion-input clearInput [(ngModel)]="senha" type="password" value="123456789" id="senha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"><b>Confirmar senha:</b></ion-label>
+        <ion-input clearInput [(ngModel)]="confirmarsenha" type="password" value="123456789" id="senha"></ion-input>
+      </ion-item>
+  
+      <ion-button size="small" color="secondary" expand="block"(click)="salvar()">Salvar</ion-button>
+      <p>{{mensagem}}</p>
+    
+    </ion-card>
+   
+    
+
+    <ion-button color="danger" size="small" routerLink="/home">  Voltar </ion-button>
+    
+      <ion-button size="small" color="danger" shape="round" fill="outline" (click)= "apagar()">Limpar</ion-button>
+      
+</ion-content>
